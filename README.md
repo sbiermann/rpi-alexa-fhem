@@ -4,7 +4,7 @@ Docker Image for Alexa-FHEM
 # Build docker image
 * clone this repository
 * add alexa-fhem-0.1.9.tgz from https://forum.fhem.de/index.php/topic,60244.msg540117.html#msg540117
-* run docker build .
+* run ```docker build .```
 
 # Run docker image
 1. create directory /home/pi/alexa-docker-config
@@ -35,7 +35,7 @@ Docker Image for Alexa-FHEM
 4. run in /home/pi/alexa-docker-config
    ```
 openssl req -x509 -newkey rsa:2048 -keyout key.pem -out cert.pem -days 365
-openssl rsa -in key.pem -out newkey.pem && mv newkey.pem key.pem
+``` and ```openssl rsa -in key.pem -out newkey.pem && mv newkey.pem key.pem
    ```
-5. docker run -d --name alexa -p 3000:3000 -v /home/pi/alexa-docker-config/:/config sbiermann/rpi-alexa-fhem
-
+5. to start the image use ```docker run -d --name alexa -p 3000:3000 -v /home/pi/alexa-docker-config/:/config sbiermann/rpi-alexa-fhem
+```
