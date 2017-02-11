@@ -1,13 +1,15 @@
 FROM resin/rpi-raspbian:jessie 
 MAINTAINER Stefan Biermann 
 
+ENV TZ 'Europe/Berlin'
+
 RUN apt-get update && apt-get install npm nodejs-legacy curl &&\
     apt-get clean\
      && apt-get -yq autoremove\
      && rm -rf /var/lib/apt/lists/*
 RUN npm cache clean -f && npm install -g n &&\
     n stable
-ADD alexa-fhem-0.1.9.tgz /
+ADD alexa-fhem-0.2.0.tgz /
 RUN mv package alexa-fhem && cd alexa-fhem &&\
 	npm install && mkdir ~/.alexa && mkdir /config &&\
     cp config-sample.json /config/config.json && \
