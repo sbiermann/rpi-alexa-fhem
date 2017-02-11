@@ -33,9 +33,5 @@ Docker Image for Alexa-FHEM
 ``` 
 3. replace values in config.json with your values.
 4. run in /home/pi/alexa-docker-config
-   ```
-openssl req -x509 -newkey rsa:2048 -keyout key.pem -out cert.pem -days 365
-``` and ```openssl rsa -in key.pem -out newkey.pem && mv newkey.pem key.pem
-   ```
-5. to start the image use ```docker run -d --name alexa -p 3000:3000 -v /home/pi/alexa-docker-config/:/config sbiermann/rpi-alexa-fhem
-```
+   ```openssl req -x509 -newkey rsa:2048 -keyout key.pem -out cert.pem -days 365``` and ```openssl rsa -in key.pem -out newkey.pem && mv newkey.pem key.pem```
+5. to start the image use ```docker run -d --name alexa -p 3000:3000 -v /home/pi/alexa-docker-config/:/config sbiermann/rpi-alexa-fhem```
