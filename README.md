@@ -3,7 +3,7 @@ Docker Image for Alexa-FHEM
 
 # Build docker image
 * clone this repository
-* add alexa-fhem-0.1.9.tgz from https://forum.fhem.de/index.php/topic,60244.msg540117.html#msg540117
+* add alexa-fhem-0.2.0.tgz from https://forum.fhem.de/index.php/topic,60244.msg540117.html#msg540117
 * run ```docker build .```
 
 # Run docker image
