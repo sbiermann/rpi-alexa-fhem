@@ -1,15 +1,15 @@
-FROM debian:jessie 
+FROM debian:jessie-20171009 
 MAINTAINER Stefan Biermann 
 
 ENV TZ 'Europe/Berlin'
 
-RUN apt-get update && apt-get -y install npm nodejs-legacy curl &&\
+RUN apt-get -y install npm nodejs-legacy curl &&\
     apt-get clean\
      && apt-get -yq autoremove\
      && rm -rf /var/lib/apt/lists/*
-RUN npm cache clean -f && npm install -g n &&\
-    n stable
+
 ADD alexa-fhem-0.3.5.tgz /
+
 RUN mv package alexa-fhem && cd alexa-fhem &&\
 	npm install && mkdir ~/.alexa && mkdir /config &&\
     cp config-sample.json /config/config.json && \
