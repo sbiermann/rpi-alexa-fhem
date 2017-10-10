@@ -24,4 +24,4 @@ if [ -d tmp ]; then
   rm -rf tmp
 fi
 
-docker build -t whoami -f "Dockerfile.$ARCH" .
+docker build -t alexa-fhem -f "Dockerfile.$ARCH" .
