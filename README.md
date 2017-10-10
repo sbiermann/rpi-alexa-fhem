@@ -1,4 +1,5 @@
 # rpi-alexa-fhem
+[![Build Status](https://travis-ci.org/sbiermann/rpi-alexa-fhem.svg?branch=master)](https://travis-ci.org/sbiermann/rpi-alexa-fhem)
 Docker Image for Alexa-FHEM
 
 # Build docker image

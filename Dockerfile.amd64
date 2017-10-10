@@ -1,12 +1,7 @@
-FROM debian:jessie-20171009 
+FROM node:8.6.0-alpine 
 MAINTAINER Stefan Biermann 
 
 ENV TZ 'Europe/Berlin'
-
-RUN apt-get -y install npm nodejs-legacy curl &&\
-    apt-get clean\
-     && apt-get -yq autoremove\
-     && rm -rf /var/lib/apt/lists/*
 
 ADD alexa-fhem-0.3.5.tgz /
 
