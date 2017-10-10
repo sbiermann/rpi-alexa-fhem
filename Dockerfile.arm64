@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install npm nodejs-legacy curl &&\
      && apt-get -yq autoremove\
      && rm -rf /var/lib/apt/lists/*
 #RUN npm cache clean -f && npm install -g n &&\
-    n stable
+#    n stable
 ADD alexa-fhem-0.3.5.tgz /
 RUN mv package alexa-fhem && cd alexa-fhem &&\
 	npm install && mkdir ~/.alexa && mkdir /config &&\
