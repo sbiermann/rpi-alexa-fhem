@@ -1,11 +1,10 @@
-#!/bin/bash
 FROM arm32v7/node:8.6.0 
 MAINTAINER Stefan Biermann 
 
 ENV TZ 'Europe/Berlin'
 
 ADD alexa-fhem-0.3.5.tgz /
-RUN ls -la .
+RUN ls -la 
 RUN mv package alexa-fhem 
 RUN cd alexa-fhem 
 RUN npm install 
