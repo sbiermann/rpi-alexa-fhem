@@ -5,7 +5,8 @@ ENV TZ 'Europe/Berlin'
 
 ADD alexa-fhem-0.3.5.tgz /
 RUN mv package alexa-fhem && cd alexa-fhem &&\
-	npm install && mkdir ~/.alexa && mkdir /config &&\
+	npm install && mkdir ~/.alexa 
+RUN mkdir /config &&\
     cp config-sample.json /config/config.json && \
     ln -s /config/config.json ~/.alexa/config.json && \
     ln -s /config/key.pem /alexa-fhem/key.pem &&\ 
