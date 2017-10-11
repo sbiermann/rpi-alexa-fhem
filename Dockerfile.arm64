@@ -1,3 +1,4 @@
+#!/bin/bash
 FROM arm32v7/node:8.6.0 
 MAINTAINER Stefan Biermann 
 
