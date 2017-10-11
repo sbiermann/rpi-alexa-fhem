@@ -4,9 +4,9 @@ set -e
 docker version
 uname -a
 echo "Updating Docker engine to 17.05.0"
-sudo service docker stop
-curl -fsSL https://get.docker.com/ | sudo sh
-docker version
+#sudo service docker stop
+#curl -fsSL https://get.docker.com/ | sudo sh
+#docker version
 
 if [ "$ARCH" != "amd64" ]; then
   # prepare qemu
