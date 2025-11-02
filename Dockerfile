@@ -10,8 +10,8 @@ RUN apt-get install -y libssl-dev build-essential npm nodejs curl && \
     && rm -rf /var/lib/apt/lists/*
 #RUN npm cache clean -f && npm install -g n &&\
 #    n stable
-ADD alexa-fhem-0.5.65.tar.gz /
-RUN mv alexa-fhem-0.5.65 alexa-fhem && cd alexa-fhem &&\
+ADD alexa-fhem-0.5.64.tar.gz /
+RUN mv alexa-fhem-0.5.64 alexa-fhem && cd alexa-fhem &&\
 	npm install && mkdir ~/.alexa && mkdir /config &&\
     cp config-sample.json /config/config.json && \
     ln -s /config/config.json ~/.alexa/config.json && \
